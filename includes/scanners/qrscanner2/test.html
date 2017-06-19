@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Title of the document</title>
+    <script
+            src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+            crossorigin="anonymous"></script>
+    <script src="jsqrcode-combined.min.js"></script>
+ <script src="html5-qrcode.min.js"></script>
+</head>
+
+<body>
+<div id="reader" style="width:300px;height:250px"></div>
+<script>
+    $('#reader').html5_qrcode(function (data) {
+                // do something when code is read
+                alert(data);
+            },
+            function (error) {
+                //show read errors
+            }, function (videoError) {
+                //the video stream could be opened
+            }
+    );</script>
+</body>
+
+</html> 
